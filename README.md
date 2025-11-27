@@ -70,6 +70,42 @@ smoothed_gdf = smoothify(
 smoothed_gdf.to_file("smoothed_polygons.gpkg")
 ```
 
+## Examples
+
+### Basic Polygon Smoothing
+
+Transform pixelated polygons from raster data into smooth, natural-looking features:
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/DPIRD-DMA/Smoothify/main/images/example_1_polygon.png" alt="Basic Polygon Smoothing" width="600">
+</p>
+
+### LineString Smoothing
+
+Works perfectly for roads, streams, and other linear features:
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/DPIRD-DMA/Smoothify/main/images/example_2_linestring.png" alt="LineString Smoothing" width="600">
+</p>
+
+### Controlling Smoothness with Iterations
+
+The `smooth_iterations` parameter controls how smooth the result will be:
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/DPIRD-DMA/Smoothify/main/images/example_3_iterations.png" alt="Effect of Different Iterations" width="700">
+</p>
+
+### Merging Adjacent Geometries
+
+When processing multiple adjacent polygons, allowing merge_collection = True produces a combined result:
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/DPIRD-DMA/Smoothify/main/images/example_4_merging.png" alt="Merging Adjacent Geometries" width="700">
+</p>
+
+For more examples, see the [examples directory](https://github.com/DPIRD-DMA/Smoothify/tree/main/examples).
+
 ## General Usage
 
 The `smoothify()` function accepts three types of input:
